@@ -2,13 +2,12 @@ services:
   - type: web
     name: fedex-contractiq
     runtime: python
-    python: "3.9.13"
     buildCommand: |
       pip install -r requirements.txt
     startCommand: gunicorn app:server
     envVars:
       - key: GEMINI_API_KEY
-        value: your_api_key_here  # Replace with actual key or use Render's env vars
-      - key: PYTHONUNBUFFERED
-        value: true
-    plan: free  # Or "starter" for $7/month with better resources
+        value: your_api_key_here  # For security, set this in Render's dashboard instead
+      - key: PYTHON_VERSION
+        value: "3.9.13"  # Must match runtime.txt
+    plan: free
