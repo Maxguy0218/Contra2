@@ -1,0 +1,10 @@
+dash
+dash-bootstrap-components
+pandas
+plotly
+pdfplumber
+google-generativeai
+langchain
+faiss-cpu
+sentence-transformers
+gunicorn
