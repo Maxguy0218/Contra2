@@ -2,7 +2,7 @@ services:
   - type: web
     name: fedex-contractiq
     runtime: python
-    pythonVersion: "3.9.13"
+    python: "3.9.13"
     buildCommand: |
       pip install -r requirements.txt
     startCommand: gunicorn app:server
